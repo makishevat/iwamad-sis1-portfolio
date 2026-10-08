@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomiris Makisheva — Portfolio</title>
+  <meta name="description" content="Portfolio of Tomiris Makisheva, IT Management student at KBTU.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+  try {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark' || saved === 'light') {
+      document.documentElement.dataset.theme = saved;
+    }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">Tomiris Makisheva</span>
+
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme">
+        <span id="theme-icon" >🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="eyebrow">IT Management · KBTU</p>
+        <h1>Hi, I'm Tomiris Makisheva</h1>
+        <p class="lead">
+          I'm a third-year student who likes turning ideas into working products:
+          from cloud infrastructure and analytics to interfaces and teaching tools.
+        </p>
+        <a class="btn" href="#projects">See my projects</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <h2 id="about-title">About Me</h2>
+          <p>
+            I study IT Management at Kazakh-British Technical University (KBTU) in Kazakhstan
+            and currently have a GPA of 3.55. I'm interested in the place where technology meets
+            business: how a product is designed, built, and explained to the people who use it.
+          </p>
+          <p>
+            Before this I worked in education as an informatics mentor and an English curator,
+            and I also tutor students. Explaining difficult topics in a simple way taught me
+            to write clear interfaces and clear documentation.
+          </p>
+        </div>
+        <aside class="card">
+          <h3>What I work with</h3>
+          <ul class="tags">
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript</li>
+            <li>React &amp; TypeScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+            <li>AWS</li>
+            <li>Figma</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt" >
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <p class="section-intro">Three things I have built or worked on during my studies.</p>
+
+        <div class="projects-grid">
+          <article class="card project">
+            <h3>React + TypeScript course app</h3>
+            <p>
+              A multi-page React app built over several weeks of my web development course.
+              It uses react-router with a shared layout, keeps likes in a React Context so they
+              persist between pages, and has a Vitest test for the like button.
+              Deployed with GitHub Pages.
+            </p>
+            <p class="project-links">
+              <a href="https://github.com/makishevat/iwamad-practice">Repository</a>
+            </p>
+          </article>
+
+          <article class="card project">
+            <h3>UI/UX Design</h3>
+            <p>
+              A Figma-based interior design marketplace concept with user personas, wireframes,
+              user flows, customer journey mapping, UI components, and an interactive prototype 
+              focused on connecting clients with interior design professionals.
+            </p>
+            <p class="project-links">
+              <a href="https://www.figma.com/design/h8vaFL2f01V4icYGomKg39/Art-shop?node-id=0-1&p=f&t=DdBBETFs4BI6jURC-0">Project</a>
+            </p>
+          </article>
+
+          <article class="card project">
+            <h3>Data Analytics</h3>
+            <p>
+              A data analytics project focused on analyzing Superstore sales using SQL, Python, Excel and Power BI. 
+              Cleaned and explored the data, identified sales trends and patterns,
+              and created dashboards with business insights and recommendations
+            </p>
+            <p class="project-links">
+              <a href="https://canva.link/bka9qe6k6g45bo6">Project presentation</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" >
+      <div class="container contact-wrap">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section-intro">Want to work together or ask about a project? Send me a message.</p>
+
+        <form id="contact-form" class="card form" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name">
+            <p class="error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+            <p class="error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <p class="error" id="message-error" role="alert"></p>
+          </div>
+
+          <button class="btn" type="submit">Send message</button>
+          <p id="form-status" class="status" role="status" ></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Tomiris Makisheva. Built with plain HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
