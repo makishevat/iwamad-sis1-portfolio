@@ -1,6 +1,6 @@
 # Tomiris Makisheva — Portfolio
 
-**Live site:** 
+**Live site:** https://makishevat.github.io/iwamad-sis1-portfolio/
 
 ## About the site
 This is my personal portfolio website.
