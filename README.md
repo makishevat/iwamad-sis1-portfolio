@@ -24,4 +24,10 @@ I built it with plain HTML, CSS and JavaScript, without frameworks.
    made the teal darker in the light theme and brighter in the dark theme,
    so it is visible on both backgrounds.
 
-3. **After testing on a phone.** 
+3. **After testing on a phone.** When I opened the site at 375 px, I saw that
+   the menu was hidden behind a hamburger button. I decided to remove the
+   button and show the menu as a column under my name, because there are only
+   three sections, and when I opened the menu, it covered the main content,
+   which was not convenient to see and use.
+   I also noticed that the "Send message" button looked too small, so I
+   increased its padding to make it easier to tap.

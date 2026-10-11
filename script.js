@@ -37,11 +37,19 @@ form.addEventListener('submit', (event) => {
   }
 
   const email = emailInput.value.trim();
+  const atPosition = email.indexOf('@');
+  const goodEnding =
+    email.endsWith('.com') ||
+    email.endsWith('.kz') ||
+    email.endsWith('.ru') ||
+    email.endsWith('.org') ||
+    email.endsWith('.net');
+
   if (email === '') {
     emailError.textContent = 'Please enter your email address.';
     hasError = true;
-  } else if (!email.includes('@') || !email.includes('.')) {
-    emailError.textContent = 'This email looks wrong. Use the format name@example.com.';
+  } else if (atPosition < 1 || !goodEnding) {
+    emailError.textContent = 'This email looks wrong. Check the format and the ending, for example name@gmail.com.';
     hasError = true;
   }
 
